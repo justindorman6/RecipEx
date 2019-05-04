@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>JAY's prototype</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/prototype.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400|Quicksand:300,400" rel="stylesheet">
+	<!-- this is a comment in HTML -->
+</head>
+
+
+<body style="font-family: 'Quicksand', sans-serif; font-weight: 400 bolder; color: #000000;">
+  <!--This is the fixed top-->
+  <div class="navbar_top">
+      <a href="cook1.html" id="back">
+      <img src="images/arrow.png" height="20" alt="p">
+    </a>
+    <a href="#ourApp" style="font-size: 16pt;background: none;">cook</a>
+    <a href="" id="profile_icon">
+    </a>
+  </div>
+  <!--END-->
+
+	<!--This is the fixed bottom-->
+	<div class="navbar_bottom">
+		<a href="homepage.html">
+			<img src="images/home.png" style="margin-bottom:1.5"  height="42" alt="p">
+		</a>
+		<a href="cook1.html" id="cook">
+			<img src="images/cook.png" style="margin-bottom:1" height="40" alt="p">
+		</a>
+		<a href="mykitchen.html">
+			<img src="images/kitchen.png" style="margin-bottom:-0.6" height="40" alt="p">
+		</a>
+		<a href="addfood.html" >
+			<img src="images/add.png" style="margin-bottom:-0.9" height="38" alt="p">
+		</a>
+	</div>
+	<!-- END -->
+
+  <div class="main">
+    <!--Recipe page title-->
+    <div class="container">
+      <h4 style="font-family: 'Quicksand', sans-serif; font-weight: 400 bolder; color: #000000;">
+				My Kitchen Ingredients:
+				<t style="float:right; font-size:13;margin-right:10;">
+					<input type='checkbox' id="chooseAll" style="margin-right:5px;">Choose all</button>
+				</t>
+			</h4>
+			<div id="food_list">
+      <a href="#">
+        <img src="images/make.png" alt="make food" id="make_button">
+      </a>
+		</div>
+  </div>
+
+	<script id="list-template" type="text/x-handlebars-template">
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+					<a data-toggle="collapse" href="#collapse{{id}}" style="padding-right:100%;">{{category}}</a>
+					</h4>
+				</div>
+				<div id="collapse{{id}}" class="panel-collapse collapse in">
+				</div>
+			</div>
+		</div>
+	</script>
+
+  <!-- include JavaScript near the end of the HTML file -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/cookusekitchenfood.js"></script>
+	<script src="js/handlebar.js"></script>
+</body>
+</html>

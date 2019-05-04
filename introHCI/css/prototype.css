@@ -1,0 +1,271 @@
+body {
+     /*border: 1px dotted gray;
+     padding: 20px;*/
+		 background-color: #f4ecd6;
+}
+
+
+.navbar_top {
+	z-index: 1;
+	display:flex;
+	align-items:flex-start;
+	justify-content: space-between;
+	overflow: hidden;
+	background-color: #8eaf9d;
+	position: fixed;
+	height:45px;
+	text-align: center;
+	top: 0;
+	width:100%;
+}
+
+.navbar_top a{
+	float: left;
+	align-self:center;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 2px 5px;
+	text-decoration: none;
+}
+
+.navbar_top a:hover{
+	background: #ddd;
+	color: black;
+}
+
+.navbar_bottom {
+	z-index: 1;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	overflow: hidden;
+	background-color: #8eaf9d;
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width:100%;
+}
+
+.navbar_bottom a{
+	align-self:center;
+	float: left;
+	display: block;
+	color: black;
+	text-align:center;
+	padding: 4px 16px;
+	text-decoration: none;
+}
+
+.navbar_bottom a:hover{
+	background: #ddd;
+	color: black;
+}
+
+.sidenav {
+		align-items:flex-start;
+		justify-content: space-between;
+    height:100%;
+		position: fixed;
+    width: 0;
+		justify-content: space-between;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #8eaf9d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+		align-items: flex-start;
+}
+
+.sidenav a {
+    /*padding: 30px 20px 0px 20px;*/
+		align-self:center;
+    text-decoration: none;
+    font-size: 16px;
+		text-align:center;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.main{
+	margin-top: 45px;
+	margin-bottom: 50px;
+	background-color: #f4ecd6;
+}
+
+.project{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.project a {
+     text-align: center;
+}
+
+#toggle_div{
+	background: rgb(255, 255, 255);
+	opacity: 1;
+	width:100%;
+	top: 0;
+	right: 0;
+	display:block;
+}
+
+#close_btn{
+	font-size: 32;
+	padding: 0px 10px 0px 0px;
+	text-align: right;
+	top:0;
+	right:0;
+}
+
+
+.scrolling-wrapper-flexbox {
+  display:flex;
+  flex-wrap: nowrap;
+  overflow-x:auto;
+	background: white;
+}
+
+.card {
+  border: 3px solid white;
+  width: 150px;
+  height: 150px;
+  background: white;
+	font-size: 10;
+	text-align: center;
+	align-content: center;
+	line-height: 1;
+}
+
+.homepage_recipes{
+	padding: 2px;
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #f4ecd6;
+}
+
+#make_button{
+	width: 70px;
+  height: 70px;
+	z-index: 1;
+	position: fixed;
+  bottom: 55px;
+  right: 5px;
+}
+
+#edit_button{
+	z-index: 1;
+	position: fixed;
+	bottom: 55px;
+	right: 5px;
+}
+
+#share_button{
+	width: 55px;
+	height: 55px;
+	z-index: 1;
+	position: fixed;
+	bottom: 55px;
+	right: 0px;
+}
+
+.star {
+  font-size: 25px;
+	color:gold;
+	float: right;
+	margin-right:15px;
+	margin-top: 30px;
+}
+
+.sharenav{
+		align-items:flex-start;
+		justify-content: space-between;
+
+		overflow: hidden;
+    height:100%;
+		position: fixed;
+    width: 0;
+		justify-content: space-between;
+    z-index: 1;
+		bottom = 0;
+    top: 70%;
+    right: 0;
+    background-color: lightblue;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+}
+.sharenav t{
+	align-self:center;
+	text-decoration: none;
+	color: #000;
+	display: block;
+	transition: 0.3s;
+	font-size: 12px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 200px;
+		left:50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    border-radius: 18px;
+    padding: 10px;
+    position: fixed;
+		text-align: center;
+    z-index: 1;
+    bottom: 30px;
+    font-size: 15px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

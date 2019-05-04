@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>JAY's prototype</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/prototype.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400|Quicksand:300,400" rel="stylesheet">
+	<!-- this is a comment in HTML -->
+</head>
+
+
+<body style="font-family: 'Quicksand', sans-serif; font-weight: 400 bolder; color: #000000;">
+  <!--This is the fixed top-->
+  <div class="navbar_top">
+		<a href="javascript:history.go(-1)" id="back"><img src="images/arrow.png" height="20" alt="p"></a>
+    <a href="#ourApp" style="font-size: 16pt;background: none;">Recipes</a>
+    <a href="" id="profile_icon">
+    </a>
+  </div>
+  <!--END-->
+
+	<!--This is the fixed bottom-->
+	<div class="navbar_bottom">
+		<a href="homepage.html">
+			<img src="images/home.png" style="margin-bottom:1.5"  height="42" alt="p">
+		</a>
+		<a href="cook1.html" id="cook">
+			<img src="images/cook.png" style="margin-bottom:1" height="40" alt="p">
+		</a>
+		<a href="mykitchen.html">
+			<img src="images/kitchen.png" style="margin-bottom:-0.6" height="40" alt="p">
+		</a>
+		<a href="addfood.html" >
+			<img src="images/add.png" style="margin-bottom:-0.9" height="38" alt="p">
+		</a>
+	</div>
+	<!-- END -->
+
+  <div class="main">
+    <!--Recipe page title-->
+		<div class="btn-group btn-group-justified">
+			<a href="cookrecipelist.html" style="background:#CBCACA; border-color:transparent;border-width:0.5; color:black;" class="btn btn-primary" id="ingredient">By ingredients</a>
+			<a href="cookrecipelist.html?id=2" class="btn btn-primary" style="background:#F1F1F1; border-color:transparent; border-width:0.5; color:black;" style="z-index:0;" id="calories">By calories</a>
+			<a href="cookrecipelist.html?id=3" class="btn btn-primary" style="background:#F1F1F1; border-color:transparent; border-width:0.5; color:black;" style="z-index:0;" id="time">By time</a>
+		</div>
+    <div id="container">
+    	<!--<h3 style="margin-left:20px;margin-top:60px;margin-bottom:10px;">Recipes:</h3>
+			-->
+		</div>
+  </div>
+
+	<div id="snackbar">Filter recipes by ingredients matched.</div>
+
+	<script id="recipe-template" type="text/x-handlebars-template">
+		<div style="position: relative;text-align: center;color: white;">
+			<a href="recipe.html?id={{id}}" class="thumbnail" style="width: 100%;height: 75px; overflow: hidden;">
+				<img src="{{pic}}" alt="Test image" class="img" style="width: 110%; height:300px; margin: -80px 0 0 0; opacity: 0.4;filter: alpha(opacity=50);">
+				<p style="position: absolute;top:50%;left: 50%; transform: translate(-50%, -50%); font-size:20px;font-style: 400 bolder;color:black;line-height:1">{{name}}</p>
+				<p id="{{id}}" style="position: absolute;bottom: -6px;left: 10px;color:black; font-weight: bolder; opacity: 1; font-size:12px;">here</p>
+			</a>
+		</div>
+	</script>
+
+  <!-- include JavaScript near the end of the HTML file -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/handlebar.js"></script>
+	<script src="js/cookrecipelist.js"></script>
+</body>
+</html>
